@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1.syntax and data types
+        console.log('Hello JavaScript');
+//2.variable declaration
+        let name="enea";
+        let age=18;
+        let bardhi=true;
+        let x;
+        let y=null;
+        console.log(name,age,bardhi,x,y);
+//3.type conversion
+let string="100";
+let number=300;
+strtonum=parseInt(string);
+numtostr=number.toString();
+console.log(strtonum,"number");
+console.log(numtostr,"string");
+//4.operators and expressions
+function calculator (num1,num2){
+    let sum=num1+num2;
+    let sub=num1-num2;
+    let mul=num1*num2;
+    let div=num1/num2;
+    console.log(sum,sub,mul,div);
+}
+calculator(10,5);
+//5.even or odd\
+let num=10;
+if(num%2==0){console.log("even");}
+else{console.log("odd");}
+//comparison operators
+let a=90;
+let b=80-89;
+let c=70-79;
+let d=60-69;
+let f=60;
+function fiz(a, f) {
+    console.log("fiz function", a, f);
+}
+
+function buzz(a, b, c, d, f) {
+    console.log("buzz function", a, b, c, d, f);
+}
+
+function fizzbuzz(a, f) {
+    console.log("fizzbuzz function", a, f);
+}
+
+fiz(a,f);
+buzz(a,b,c,d,f);
+fizzbuzz(a,f);
+
+//6.password validation whith 8 caracters and at lest one number
+let password = "enea123";
+let numb = false;
+if (password.length >= 8) {
+    for (let i = 0; i < password.length; i++) {
+        if (!isNaN(password[i])) {
+            number = true;
+            break;
+        }
+    }
+}
+if (number) {
+    console.log("Password is valid");
+} else {
+    console.log("Password is invalid");
+}
+
+//7.function
+function pershendet(emri) {
+    console.log("hello, " + emri );
+}
+pershendet("Enea");
+//8 factorial calculator
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+console.log(factorial(5)); // Output: 120
+
+//9 palindrome cheker
+function isPalindrome(str) {
+    let j = str.length - 1
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] != str[j]) {
+            return false;
+        }
+        j--;
+    }
+    return true;
+}
+
+let str1 = "racecar";
+let str2 = "nitin";
+let str3 = "Rama";
+
+console.log(isPalindrome(str1));
+console.log(isPalindrome(str2));
+console.log(isPalindrome(str3));
+//su m of array
+let arr=[1,2,3,4,5,6];
+let sum=0;
+for(let i=0;i<arr.length;i++){
+    sum+=arr[i];
+}
+console.log(sum);
+//fin max number
+function findMax(arr) { 
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(findMax(arr));
+
+//filter even numbers
+function filterEven(arr) {
+    let evenArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            evenArr.push(arr[i]);
+        }
+    }
+    return evenArr;
+}
+console.log(filterEven(arr));
+//object properties
+let person = {
+    name: "Enea",
+    age: 18,
+    city: "Voskopoje"
+};
+console.log(person.name, person.age, person.city);
+
+//object methods
+let person1 = {
+    name: "Enea",
+    age: 18,
+    city: "Voskopoje",
+    getPersonInfo: function() {
+        return `Un jam ${this.name}, jam ${this.age} vjec dhe vij nga ${this.city}`;
+    }
+};
+console.log(person1.getPersonInfo());
+
+// sa
+let shoppingCar = [
+    {
+        product: "laptop",
+        price: 1000,
+        quanty: 3
+    },
+    {
+        product: "smartphone",
+        price: 500,
+        quanty: 2
+    },
+    {
+        product: "headphones",
+        price: 100,
+        quanty: 1
+    }
+]
+
+let total = 0;
+for (let i = 0; i < shoppingCar.length; i++) {
+    total += shoppingCar[i].price * shoppingCar[i].quanty;
+}
+console.log(total);
+
+
+
+
+
+
+        </script>
+</body>
+</html>
